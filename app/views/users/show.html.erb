@@ -13,7 +13,7 @@
     <tbody>
       <% @tasks.each do |task| %>
         <tr>
-          <td><%= task.id %></td>
+          <td><%= link_to task.id, task %></td>
           <td><%= task.content %></td>
           <td><%= task.status %></td>
         </tr>
@@ -27,12 +27,6 @@
   
 <% end %>
 
-
-
-  <div class="center jumbotron">
-    <div class="text-center">
-      <h1>タスク管理を始める</h1>
-      <%= link_to 'Sign up now!', signup_path, class: 'btn btn-lg btn-primary' %>
-    </div>
-  </div>
-
+<%= link_to 'タスクの登録', new_task_path, class: "btn btn-success" %>
+  
+</div>
